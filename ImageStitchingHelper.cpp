@@ -56,6 +56,7 @@ void depthFromStereoImages(const vector<Mat>& imgs) {
 
 void mainSample(vector<Mat> images) {
 
+    // Please change image paths
     Mat image1 = imread("/Users/nuwanda/CLionProjects/ImageStitching/a17.jpg");
     Mat image2 = imread("/Users/nuwanda/CLionProjects/ImageStitching/a18.jpg");
     // Mat image3 = imread("/Users/nuwanda/CLionProjects/ImageStitching/IMG_1788-2.jpg");

@@ -28,6 +28,7 @@ Mat greenFilter(const Mat& src) {
 
 void featureMatching(vector<Mat> images) {
 
+    // Please change image paths
     Mat image1 = imread("/Users/nuwanda/CLionProjects/ImageStitching/a21.jpg");
     Mat image2 = imread("/Users/nuwanda/CLionProjects/ImageStitching/a22.jpg");
 
