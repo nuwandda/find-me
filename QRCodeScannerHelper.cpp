@@ -29,7 +29,7 @@ double calculateAreaOfPolygon(vector<Point> points) {
         area += 0.5 * (points[i].x * points[j].y - points[j].x * points[i].y);
     }
 
-    return (area);
+    return (abs(area));
 }
 
 void displayQRCode(Mat &im, Mat &bbox) {
@@ -43,7 +43,7 @@ void displayQRCode(Mat &im, Mat &bbox) {
     imshow("Result", im);
 }
 
-void detectPaper(Mat &image, vector<vector<Point> > &squares) {
+void detectPaper(Mat &image, vector<vector<Point> > &squares, vector<Point> &biggest_area) {
 
     // blur will enhance edge detection
     Mat blurred(image);
@@ -98,6 +98,15 @@ void detectPaper(Mat &image, vector<vector<Point> > &squares) {
                         squares.push_back(approx);
                 }
             }
+        }
+    }
+
+    double area = 0;
+    for (const auto &square : squares) {
+
+        double temp_area = calculateAreaOfPolygon(square);
+        if (temp_area > area) {
+            biggest_area = square;
         }
     }
 }
