@@ -11,7 +11,7 @@
 using namespace cv;
 using namespace std;
 
-double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0) {
+double angle(const Point &pt1, const Point &pt2, const Point &pt0) {
 
     double dx1 = pt1.x - pt0.x;
     double dy1 = pt1.y - pt0.y;
