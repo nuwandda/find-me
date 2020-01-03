@@ -1,0 +1,20 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me"
+-- The CXX compiler identification is AppleClang 10.0.1.10010046
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Build type: Debug
+-- Configuration types: 
+-- A 64-bit OS detected
+-- Found OpenCV: /usr/local (found version "3.4.5") 
+-- OpenCV library status:
+--     config: /usr/local/share/OpenCV
+--     version: 3.4.5
+--     libraries: opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab
+--     include path: /usr/local/include;/usr/local/include/opencv
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug
