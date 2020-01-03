@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named GraphWithAdjacency
+# Target rules for targets named QRCodeScannerHelper
 
 # Build rule for target.
-GraphWithAdjacency: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GraphWithAdjacency
-.PHONY : GraphWithAdjacency
+QRCodeScannerHelper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 QRCodeScannerHelper
+.PHONY : QRCodeScannerHelper
 
 # fast build rule for target.
-GraphWithAdjacency/fast:
-	$(MAKE) -f CMakeFiles/GraphWithAdjacency.dir/build.make CMakeFiles/GraphWithAdjacency.dir/build
-.PHONY : GraphWithAdjacency/fast
+QRCodeScannerHelper/fast:
+	$(MAKE) -f CMakeFiles/QRCodeScannerHelper.dir/build.make CMakeFiles/QRCodeScannerHelper.dir/build
+.PHONY : QRCodeScannerHelper/fast
 
 #=============================================================================
 # Target rules for targets named ImageStitchingHelper
@@ -135,6 +135,19 @@ ImageStitchingHelper: cmake_check_build_system
 ImageStitchingHelper/fast:
 	$(MAKE) -f CMakeFiles/ImageStitchingHelper.dir/build.make CMakeFiles/ImageStitchingHelper.dir/build
 .PHONY : ImageStitchingHelper/fast
+
+#=============================================================================
+# Target rules for targets named GraphWithAdjacency
+
+# Build rule for target.
+GraphWithAdjacency: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GraphWithAdjacency
+.PHONY : GraphWithAdjacency
+
+# fast build rule for target.
+GraphWithAdjacency/fast:
+	$(MAKE) -f CMakeFiles/GraphWithAdjacency.dir/build.make CMakeFiles/GraphWithAdjacency.dir/build
+.PHONY : GraphWithAdjacency/fast
 
 #=============================================================================
 # Target rules for targets named FeatureMatchingHelper
@@ -243,6 +256,33 @@ ImageStitchingHelper.cpp.s:
 	$(MAKE) -f CMakeFiles/ImageStitchingHelper.dir/build.make CMakeFiles/ImageStitchingHelper.dir/ImageStitchingHelper.cpp.s
 .PHONY : ImageStitchingHelper.cpp.s
 
+QRCodeScannerHelper.o: QRCodeScannerHelper.cpp.o
+
+.PHONY : QRCodeScannerHelper.o
+
+# target to build an object file
+QRCodeScannerHelper.cpp.o:
+	$(MAKE) -f CMakeFiles/QRCodeScannerHelper.dir/build.make CMakeFiles/QRCodeScannerHelper.dir/QRCodeScannerHelper.cpp.o
+.PHONY : QRCodeScannerHelper.cpp.o
+
+QRCodeScannerHelper.i: QRCodeScannerHelper.cpp.i
+
+.PHONY : QRCodeScannerHelper.i
+
+# target to preprocess a source file
+QRCodeScannerHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/QRCodeScannerHelper.dir/build.make CMakeFiles/QRCodeScannerHelper.dir/QRCodeScannerHelper.cpp.i
+.PHONY : QRCodeScannerHelper.cpp.i
+
+QRCodeScannerHelper.s: QRCodeScannerHelper.cpp.s
+
+.PHONY : QRCodeScannerHelper.s
+
+# target to generate assembly for a file
+QRCodeScannerHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/QRCodeScannerHelper.dir/build.make CMakeFiles/QRCodeScannerHelper.dir/QRCodeScannerHelper.cpp.s
+.PHONY : QRCodeScannerHelper.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -277,9 +317,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... GraphWithAdjacency"
-	@echo "... ImageStitchingHelper"
 	@echo "... edit_cache"
+	@echo "... QRCodeScannerHelper"
+	@echo "... ImageStitchingHelper"
+	@echo "... GraphWithAdjacency"
 	@echo "... FeatureMatchingHelper"
 	@echo "... main"
 	@echo "... FeatureMatchingHelper.o"
@@ -291,6 +332,9 @@ help:
 	@echo "... ImageStitchingHelper.o"
 	@echo "... ImageStitchingHelper.i"
 	@echo "... ImageStitchingHelper.s"
+	@echo "... QRCodeScannerHelper.o"
+	@echo "... QRCodeScannerHelper.i"
+	@echo "... QRCodeScannerHelper.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

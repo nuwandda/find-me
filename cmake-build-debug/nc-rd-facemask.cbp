@@ -27,31 +27,18 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="GraphWithAdjacency">
-				<Option output="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug/GraphWithAdjacency" prefix_auto="0" extension_auto="0"/>
+			<Target title="edit_cache">
 				<Option working_dir="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphWithAdjacency"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="GraphWithAdjacency/fast">
-				<Option output="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug/GraphWithAdjacency" prefix_auto="0" extension_auto="0"/>
+			<Target title="QRCodeScannerHelper">
+				<Option output="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug/QRCodeScannerHelper" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -67,7 +54,30 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphWithAdjacency/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 QRCodeScannerHelper"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QRCodeScannerHelper/fast">
+				<Option output="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug/QRCodeScannerHelper" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 QRCodeScannerHelper/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -119,11 +129,47 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="GraphWithAdjacency">
+				<Option output="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug/GraphWithAdjacency" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphWithAdjacency"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GraphWithAdjacency/fast">
+				<Option output="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug/GraphWithAdjacency" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphWithAdjacency/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nuwanda/Documents/Courses/Graduate/CENG\ 509\ -\ Vision\ Based\ Tracking\ and\ Modeling/find-me/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -236,6 +282,12 @@
 		</Unit>
 		<Unit filename="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/ImageStitchingHelper.h">
 			<Option target="ImageStitchingHelper"/>
+		</Unit>
+		<Unit filename="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/QRCodeScannerHelper.cpp">
+			<Option target="QRCodeScannerHelper"/>
+		</Unit>
+		<Unit filename="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/QRCodeScannerHelper.h">
+			<Option target="QRCodeScannerHelper"/>
 		</Unit>
 		<Unit filename="/Users/nuwanda/Documents/Courses/Graduate/CENG 509 - Vision Based Tracking and Modeling/find-me/main.cpp">
 			<Option target="main"/>
