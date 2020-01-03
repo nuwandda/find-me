@@ -20,6 +20,18 @@ double angle(const Point &pt1, const Point &pt2, const Point &pt0) {
     return (dx1 * dx2 + dy1 * dy2) / sqrt((dx1 * dx1 + dy1 * dy1) * (dx2 * dx2 + dy2 * dy2) + 1e-10);
 }
 
+double calculateAreaOfPolygon(vector<Point> points) {
+
+    double area = 0.0;
+
+    for (int i = 0; i < 4; ++i) {
+        int j = (i + 1) % 4;
+        area += 0.5 * (points[i].x * points[j].y - points[j].x * points[i].y);
+    }
+
+    return (area);
+}
+
 void displayQRCode(Mat &im, Mat &bbox) {
 
     int n = bbox.rows;
