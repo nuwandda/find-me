@@ -34,7 +34,7 @@ double calculateAreaOfPolygon(vector<Point> points) {
 
 void cropQRCode(vector<Point> points, Mat &cropped, const Mat &image) {
 
-    Rect roi(points[0].x, points[0].y, points[2].x - points[0].x, points[2].y - points[0].y);
+    Rect roi(points[3].x, points[3].y, points[1].x - points[3].x, points[1].y - points[3].y);
     cropped = image(roi);
 }
 
@@ -47,6 +47,25 @@ void displayQRCode(Mat &im, Mat &bbox) {
              Point2i(bbox.at<float>((i + 1) % n, 0), bbox.at<float>((i + 1) % n, 1)), Scalar(255, 0, 0), 3);
     }
     imshow("Result", im);
+}
+
+void detectQRCode(Mat &image) {
+
+    QRCodeDetector qrDecoder = QRCodeDetector();
+
+    Mat bbox, rectified_image;
+    string data = qrDecoder.detectAndDecode(image, bbox, rectified_image);
+
+    if (data.length() > 0) {
+        cout << "Decoded Data : " << data << endl;
+
+        displayQRCode(image, bbox);
+        rectified_image.convertTo(rectified_image, CV_8UC3);
+        imshow("Rectified QRCode", rectified_image);
+
+        waitKey(0);
+    } else
+        cout << "QR Code not detected" << endl;
 }
 
 void detectPaper(Mat &image, vector<vector<Point> > &squares, vector<Point> &biggest_area) {
