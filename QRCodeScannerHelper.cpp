@@ -32,6 +32,12 @@ double calculateAreaOfPolygon(vector<Point> points) {
     return (abs(area));
 }
 
+void cropQRCode(vector<Point> points, Mat &cropped, const Mat &image) {
+
+    Rect roi(points[0].x, points[0].y, points[2].x - points[0].x, points[2].y - points[0].y);
+    cropped = image(roi);
+}
+
 void displayQRCode(Mat &im, Mat &bbox) {
 
     int n = bbox.rows;
