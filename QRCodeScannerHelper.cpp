@@ -8,6 +8,8 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <iostream>
 
+const double MIN_AREA = 2500;
+
 using namespace cv;
 using namespace std;
 
@@ -46,10 +48,10 @@ void displayQRCode(Mat &im, Mat &bbox) {
         line(im, Point2i(bbox.at<float>(i, 0), bbox.at<float>(i, 1)),
              Point2i(bbox.at<float>((i + 1) % n, 0), bbox.at<float>((i + 1) % n, 1)), Scalar(255, 0, 0), 3);
     }
-    imshow("Result", im);
+//    imshow("Result", im);
 }
 
-void detectQRCode(Mat &image) {
+bool detectQRCode(Mat &image, string &data_string) {
 
     QRCodeDetector qrDecoder = QRCodeDetector();
 
@@ -58,14 +60,18 @@ void detectQRCode(Mat &image) {
 
     if (data.length() > 0) {
         cout << "Decoded Data : " << data << endl;
+        data_string = data;
 
         displayQRCode(image, bbox);
         rectified_image.convertTo(rectified_image, CV_8UC3);
-        imshow("Rectified QRCode", rectified_image);
-
-        waitKey(0);
-    } else
+//        imshow("Rectified QRCode", rectified_image);
+//
+//        waitKey(0);
+        return true;
+    } else {
         cout << "QR Code not detected" << endl;
+        return false;
+    }
 }
 
 void detectPaper(Mat &image, vector<vector<Point> > &squares, vector<Point> &biggest_area) {
@@ -131,6 +137,7 @@ void detectPaper(Mat &image, vector<vector<Point> > &squares, vector<Point> &big
 
         double temp_area = calculateAreaOfPolygon(square);
         if (temp_area > area) {
+            area = temp_area;
             biggest_area = square;
         }
     }
