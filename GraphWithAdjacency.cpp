@@ -90,25 +90,30 @@ void display_AdjList(adjNode *ptr, int i) {
 
 vector<vector<node> > findNeighbours(const vector<node> &nodes) {
 
-    vector<vector<Point> > squares;
-    vector<Point> biggest_square;
-    Mat cropped;
-    string data_string;
-    string cdata_string;
     vector<vector<node> > neighbours;
-
     for (const auto &r_node: nodes) {
+        vector<vector<Point> > squares;
+        vector<Point> biggest_square;
+        Mat cropped;
+        string data_string;
         vector<node> neighbour;
+        printf("Node R: %d\n", r_node.val);
         for (auto temp : r_node.scene) {
             detectPaper(temp, squares, biggest_square);
             cropQRCode(biggest_square, cropped, temp);
             if (detectQRCode(cropped, data_string)) {
-                vector<vector<Point> > csquares;
-                vector<Point> cbiggest_square;
-                Mat ccropped;
+
                 for (const auto &c_node: nodes) {
+                    vector<vector<Point> > csquares;
+                    vector<Point> cbiggest_square;
+                    Mat ccropped;
+                    string cdata_string;
+                    printf("Node C: %d\n", c_node.val);
                     if (c_node.val != r_node.val) {
+                        int count = 1;
                         for (auto c_temp : c_node.scene) {
+                            printf("Count: %d\n", count);
+                            count++;
                             detectPaper(c_temp, csquares, cbiggest_square);
                             cropQRCode(cbiggest_square, ccropped, c_temp);
                             if (detectQRCode(ccropped, cdata_string)) {
