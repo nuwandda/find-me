@@ -75,7 +75,7 @@ bool detectQRCode(Mat &image, string &data_string) {
         cout << "Decoded Data : " << data << endl;
         data_string = data;
 
-        displayQRCode(image, bbox);
+//        displayQRCode(image, bbox);
         rectified_image.convertTo(rectified_image, CV_8UC3);
         return true;
     } else {
@@ -84,9 +84,8 @@ bool detectQRCode(Mat &image, string &data_string) {
     }
 }
 
-void detectPaper(Mat &img, vector<vector<Point> > &squares, vector<Point> &biggest_area) {
+void detectPaper(Mat &image, vector<vector<Point> > &squares, vector<Point> &biggest_area) {
 
-    const Mat &image = img;
     // blur will enhance edge detection
     Mat blurred(image);
     medianBlur(image, blurred, 9);
