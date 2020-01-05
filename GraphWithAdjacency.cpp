@@ -9,7 +9,7 @@
 #include <ImageStitchingHelper.cpp>
 #include <QRCodeScannerHelper.cpp>
 
-const int D1 = 0;
+const int D1 = 1;
 const int D2 = 2;
 const int D3 = 3;
 const int D4 = 4;
@@ -21,6 +21,7 @@ using namespace cv;
 struct adjNode {
     int val;
     adjNode *next;
+    vector<Mat> scene;
 };
 
 struct node {
@@ -37,9 +38,10 @@ struct graphEdge {
 class GraphWithAdjacency {
 
     // insert new nodes into adjacency list from given graph
-    adjNode *getAdjListNode(int value, adjNode *head) {
+    adjNode *getAdjListNode(int value, adjNode *head, vector<Mat> scene) {
         adjNode *newNode = new adjNode;
         newNode->val = value;
+        newNode->scene = scene;
 
         newNode->next = head;   // point new node to current head
         return newNode;
@@ -63,8 +65,9 @@ public:
         for (unsigned i = 0; i < n; i++) {
             int start_ver = edges[i].start_node.val;
             int end_ver = edges[i].end_node.val;
+            vector<Mat> scene = edges[i].end_node.scene;
             // insert in the beginning
-            adjNode *newNode = getAdjListNode(end_ver, head[start_ver]);
+            adjNode *newNode = getAdjListNode(end_ver, head[start_ver], scene);
 
             // point head pointer to new node
             head[start_ver] = newNode;
@@ -91,16 +94,16 @@ void display_AdjList(adjNode *ptr, int i) {
 vector<vector<node> > findNeighbours(const vector<node> &nodes) {
 
     vector<vector<node> > neighbours;
+    vector<node> neighbour;
     for (const auto &r_node: nodes) {
         vector<vector<Point> > squares;
         vector<Point> biggest_square;
         Mat cropped;
         string data_string;
-        vector<node> neighbour;
-        printf("Node R: %d\n", r_node.val);
-        for (auto temp : r_node.scene) {
-            detectPaper(temp, squares, biggest_square);
-            cropQRCode(biggest_square, cropped, temp);
+        for (const auto &temp : r_node.scene) {
+            Mat clone_temp = temp.clone();
+            detectPaper(clone_temp, squares, biggest_square);
+            cropQRCode(biggest_square, cropped, clone_temp);
             if (detectQRCode(cropped, data_string)) {
 
                 for (const auto &c_node: nodes) {
@@ -108,19 +111,17 @@ vector<vector<node> > findNeighbours(const vector<node> &nodes) {
                     vector<Point> cbiggest_square;
                     Mat ccropped;
                     string cdata_string;
-                    printf("Node C: %d\n", c_node.val);
                     if (c_node.val != r_node.val) {
-                        int count = 1;
-                        for (auto c_temp : c_node.scene) {
-                            printf("Count: %d\n", count);
-                            count++;
-                            detectPaper(c_temp, csquares, cbiggest_square);
-                            cropQRCode(cbiggest_square, ccropped, c_temp);
+                        for (const auto &c_temp : c_node.scene) {
+                            Mat clone_ctemp = c_temp.clone();
+                            detectPaper(clone_ctemp, csquares, cbiggest_square);
+                            cropQRCode(cbiggest_square, ccropped, clone_ctemp);
                             if (detectQRCode(ccropped, cdata_string)) {
                                 if (cdata_string == data_string) {
                                     neighbour.push_back(r_node);
                                     neighbour.push_back(c_node);
                                     neighbours.push_back(neighbour);
+                                    neighbour.clear();
                                     cout << "Found neighbours!" << endl;
                                 }
                             }
@@ -162,8 +163,8 @@ adjNode selectPath(adjNode *point) {
 
 void showAround(const adjNode& point) {
 
-//    vector<Mat> images = point.current_location;
-//    basicImageStitching(images);
+    vector<Mat> images = point.scene;
+    basicImageStitching(images);
 }
 
 String whereAmI(int val) {
