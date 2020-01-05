@@ -25,15 +25,13 @@ void basicImageStitching(const vector<Mat>& imgs) {
 
     if (status != Stitcher::OK) {
 
-        cout <<"Can't stitch images\n";
+        cout << "Can't stitch images\n";
 //        return false;
+    } else {
+        imshow("Result", resultingImage);
+        waitKey(0);
+        cvDestroyAllWindows();
     }
-
-    imwrite("result.jpg", resultingImage);
-
-    imshow("Result", resultingImage);
-    waitKey(0);
-
 //    return true;
 }
 
